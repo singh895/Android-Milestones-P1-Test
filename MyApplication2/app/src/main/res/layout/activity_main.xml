@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/priceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="60dp"
+        android:text="Price"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/priceEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:hint="Enter the price"
+        app:layout_constraintBottom_toBottomOf="@+id/priceTextView"
+        app:layout_constraintStart_toEndOf="@+id/priceTextView" />
+
+    <TextView
+        android:id="@+id/tipTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Tip"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/priceTextView"
+        app:layout_constraintTop_toBottomOf="@id/priceTextView" />
+
+    <LinearLayout
+        android:id="@+id/tipOptionsLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintTop_toTopOf="@id/tipTextView"
+        app:layout_constraintStart_toEndOf="@id/tipTextView" >
+
+        <Button
+            android:id="@+id/tip10Button"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:text="10%" />
+
+        <Button
+            android:id="@+id/tip18Button"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:text="18%" />
+
+        <Button
+            android:id="@+id/tip25Button"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:text="25%" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/tipPercentageEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:hint="Enter tipping percentage"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/tipOptionsLinearLayout"
+        app:layout_constraintTop_toBottomOf="@id/tipOptionsLinearLayout" />
+
+    <TextView
+        android:id="@+id/tipResultLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Tip Amount"
+        android:textSize="24sp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toBottomOf="@id/tipPercentageEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tipResultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.00"
+        android:textSize="45sp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toBottomOf="@id/tipResultLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="30dp"
+        android:text="Calculate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
